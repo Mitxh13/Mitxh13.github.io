@@ -21,9 +21,7 @@ const socials = [
   { name: "GitHub", link: "https://github.com/Mitxh13" },
   { name: "LinkedIn", link: "https://linkedin.com/in/mitesh-kurumeti" },
   { name: "X", link: "https://x.com/kmiteshh"},
-  { name: "Discord",link: "https://discord.gg/xdhjYHV8RV"},
-  { name: "LeetCode", link: "https://leetcode.com/u/Mitxh13/" },
-  { name: "Hackerrank", link: "https://www.hackerrank.com/profile/Mitxh13" },
+  { name: "Discord",link: "https://discord.gg/xdhjYHV8RV"}
 ];
 
 // Render projects
