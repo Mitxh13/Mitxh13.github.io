@@ -6,7 +6,7 @@ const projects = [
     link: "https://github.com/Mitxh13/G-M8"
   },
   {
-    title: "Sol-I",
+    title: "Sol I",
     desc:"AI-Powered Adaptive Operating System with Self-Learning Security",
     udev: "Under Development"
   },
