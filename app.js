@@ -6,7 +6,7 @@ const projects = [
     link: "https://github.com/Mitxh13/G-M8"
   },
   {
-    title: "Sol",
+    title: "Sol-I",
     desc:"AI-Powered Adaptive Operating System with Self-Learning Security",
     udev: "Under Development"
   },
@@ -21,7 +21,6 @@ const socials = [
   { name: "GitHub", link: "https://github.com/Mitxh13" },
   { name: "LinkedIn", link: "https://linkedin.com/in/mitesh-kurumeti" },
   { name: "X", link: "https://x.com/kmiteshh"},
-  { name: "Discord",link: "https://discord.gg/xdhjYHV8RV"}
 ];
 
 // Render projects
