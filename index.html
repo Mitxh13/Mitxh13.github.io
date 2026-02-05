@@ -1,69 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-site-verification" content="UMWIQKJEoFn37eAuyM-q8soI__IS3RbU9EOG0zK1LRU" />
-  <title>Mitesh</title>
-  <!--SEO-->
-  <meta name="keywords" content="Mitesh, Mitesh kurumeti, Mitesh Developer, Mitesh GitHub, G-M8, RioOS" />
-  <meta name="author" content="Mitesh" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="m.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitesh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="google-site-verification" content="UMWIQKJEoFn37eAuyM-q8soI__IS3RbU9EOG0zK1LRU" />
+    <meta name="keywords" content="Mitesh, Mitesh kurumeti, Mitesh Developer, Mitesh GitHub, kurumeti Mitesh, Mitesh K," />
+    <meta name="author" content="Mitesh" />
+    <link rel="icon" href="fav_icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="navbar">
-    <h1 class="logo">Mitesh kurumeti</h1>
+
+    <div class="background-blob"></div>
+
     <nav>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+        <div class="logo">Mitesh<span class="dot">.</span></div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Selected Work</a></li>
+            <li><a href="#certificates">Credentials</a></li>
+            <li><a href="#contact" class="cta-btn">Let's Talk</a></li>
+        </ul>
     </nav>
-  </header>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h2>Hello, I'm <span class="highlight">Mitesh</span></h2>
-      <p>Tech explorer crafting cool <strong>intelligent systems</strong> and <strong>tools</strong> — 
-      where code meets craziness.</p><br>
-      <a href="#projects" class="btn">View My Work</a>
+    <section id="home">
+        <div class="hero-content fade-in-up">
+            <!-- <span class="tagline">Mitesh &bull; CSE Undergraduate</span> -->
+            <h1>Hi, I'm Mitesh.<br>I Build <span class="gradient-text">Digital Reality</span>.</h1>
+            <p>
+                Computer Science and Engineering student and developer building scalable, real-world projects.<br>
+                Interested in gaming for its emphasis on real-time systems, performance optimization.
+            </p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn primary">View Projects</a>
+                <a href="#contact" class="btn secondary">Contact Me</a>
+            </div>            
+        </div>
+    </section>
+
+    <section id="about" class="hidden">
+        <div class="glass-card">
+            <h2>The Person Behind The Code</h2>
+            <p>
+                I am a Computer Science undergraduate focused on building real, production-quality software. 
+                Beyond the classroom, I engage in gaming, cricket and actively exploring the emerging technologies and 
+                tools to stay up with the evolving tech landscape.
+            </p>
+
+            <div class="stats">
+                <div>
+                    <h3>5+</h3>
+                    <span>Projects Built</span>
+                </div>
+                <div>
+                    <h3>10+</h3>
+                    <span>Technologies</span>
+                </div>
+                <!-- <div>
+                    <h3>500+</h3>
+                    <span>DSA Problems</span>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects">
+        <h2 class="section-title hidden">Featured Projects</h2>
+        <p class="subtitle hidden">A selection of my recent development work.</p>
+        
+        <div class="project-grid">
+            
+            <div class="project-card hidden" style="transition-delay: 100ms;">
+                <div class="card-image">
+                    <img src="https://placehold.co/600x400/1a1a1a/FFF?text=HeliOS" alt="Project 1">
+                </div>
+                <div class="card-content">
+                    <h3>HeliOS</h3>
+                    <p>AI-powered OS security layer that monitors CPU behavior, detects side-channel attacks, and dynamically mitigates threats with &LessLess; 5% performance overhead. </p>
+                    <div class="tags">
+                        <span>Python</span><span>Java</span><span>Linux</span><span>PyTorch</span><span>TensorFlow</span>
+                    </div>
+                    <br>
+                    <a class="gradient-text">Under development</a>
+                </div>
+            </div>
+
+            
+            <div class="project-card hidden" style="transition-delay: 100ms;">
+                <div class="card-image">
+                    <img src="https://placehold.co/600x400/1a1a1a/FFF?text=Nano-pesu" alt="Project 2">
+                </div>
+                <div class="card-content">
+                    <h3>Nano-pesu</h3>
+                    <p class="gradient-text" style="font-weight: 700;">Backend Team</p>
+                    <p>University-centric AI platform that delivers syllabus-aligned, exam-ready learning—not generic answers.</p>
+                    <div class="tags">
+                        <span>Python</span><span>Transformers</span><span>fastapi</span>
+                    </div>
+                    <br>
+                    <a class="gradient-text">Under development</a>
+                </div>
+            </div>
+            
+            
+            <div class="project-card hidden">
+                <div class="card-image">
+                    <img src="https://placehold.co/600x400/1a1a1a/FFF?text=G-M8 Chat" alt="Project 3">
+                </div>
+                <div class="card-content">
+                    <h3>G-M8 Chat</h3>
+                    <p>A real-time chat app built with Node.js, Express, and Socket.io.</p>
+                    <div class="tags">
+                        <span>React</span><span>JavaScript</span><span>MongoDB</span>
+                    </div>
+                    <br>
+                    <a href="https://github.com/Mitxh13/G-M8" class="gradient-text">View Project &rarr;</a>
+                </div>
+            </div>
+            
+            <!-- Temp for next projects
+            <div class="project-card hidden" style="transition-delay: 200ms;">
+                <div class="card-image">
+                    <img src="https://placehold.co/600x400/1a1a1a/FFF?text=Nexus+AI" alt="Project 3">
+                </div>
+                <div class="card-content">
+                    <h3>Nexus AI Wrapper</h3>
+                    <p>An intelligent SaaS interface leveraging Large Language Models for automated customer support.</p>
+                    <div class="tags">
+                        <span>Python</span><span>OpenAI API</span><span>Docker</span>
+                    </div>
+                    <a href="#" class="arrow-link">Explore Case Study &rarr;</a>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <section id="certificates" class="hidden">
+        <h2 class="section-title">Professional Certifications</h2>
+        <p class="subtitle">Verified credentials and technical milestones.</p>
+        
+        <div class="netflix-wrapper">
+            <button class="nav-btn left-btn" onclick="scrollCerts('left')">&#8249;</button>
+            
+            <div class="cert-rail" id="certList">
+                <div class="cert-item" onclick="openModal('certificates/Python_cisco.png', 'Python')">
+                    <img src="https://placehold.co/500x300/111/fff?text=Python" alt="Cert">
+                    <div class="overlay">
+                        <span>Cisco Networking Academy</span>
+                    </div>
+                </div>
+                <div class="cert-item" onclick="openModal('certificates/OS_cisco.png', 'Operating Systems')">
+                    <img src="https://placehold.co/500x300/222/fff?text=OS" alt="Cert">
+                    <div class="overlay">
+                        <span>Cisco Networking Academy</span>
+                    </div>
+                </div>
+                <div class="cert-item" onclick="openModal('certificates/HR_problem_solving.png', 'HackerRank Problem solving')">
+                    <img src="https://placehold.co/500x300/333/fff?text=Problem+solving" alt="Cert">
+                    <div class="overlay">
+                        <span>HackerRank</span>
+                    </div>
+                </div>
+              
+                <div class="cert-item" onclick="openModal('https://placehold.co/800x600/000/fff?text=coming soon', 'idk')">
+                    <img src="https://placehold.co/500x300/444/fff?text=soon" alt="Cert">
+                    <div class="overlay">
+                        <span>coming soon</span>
+                    </div>
+                </div>
+                <!-- For later u can directly use it enjoy
+                <div class="cert-item" onclick="openModal('https://placehold.co/800x600/000/fff?text=Cyber+Ops', 'Cisco CyberOps')">
+                    <img src="https://placehold.co/500x300/555/fff?text=Security" alt="Cert">
+                    <div class="overlay">
+                        <span>Cisco CyberOps</span>
+                    </div>
+                </div> -->
+            </div>
+
+            <button class="nav-btn right-btn" onclick="scrollCerts('right')">&#8250;</button>
+        </div>
+    </section>
+
+    <section id="contact">
+    <div class="glass-card center-text hidden">
+        <h2>Let's Build Something Legendary</h2>
+        <p>I am always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+        
+        <div class="social-container">
+            <a href="https://github.com/Mitxh13" target="_blank" class="social-btn">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <span>GitHub</span>
+            </a>
+
+            <a href="www.linkedin.com/in/mitesh-kurumeti"target="_blank" class="social-btn">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+                <span>LinkedIn</span>
+            </a>
+
+            <button class="social-btn email-btn" onclick="copyEmail()">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <span>Email Me</span>
+            </button>
+        </div>
     </div>
-  </section>
 
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="grid" id="projectGrid">
-      <!--  loaded by JS chill bruhh -->
-       
+    <div id="email-toast" class="toast">
+        Email copied: kmitesh2006@gmail.com
     </div>
-  </section>
 
-  <section id="skills" class="section skills">
-    <h2>Skills</h2>
-    <div class="skill-list" id="skillList">
-      <!-- loaded by JS chill bruhh -->
+    <footer>
+        <p>&copy; 2025 Designed & Engineered by Mitesh.</p>
+    </footer>
+    </section>
 
+    <div id="modal" class="modal-overlay">
+        <div class="modal-body">
+            <span class="close-icon" onclick="closeModal()">&times;</span>
+            <img id="modal-img" src="" alt="Certificate">
+            <h3 id="modal-title"></h3>
+        </div>
     </div>
-  </section>
 
-  <section id="contact" class="section contact">
-    <h2>Contact</h2>
-    <p>Let's connect! You can find me here:</p>
-    <div class="Mail">
-      <p>Mail: kmitesh2006@gmail.com</p>
-    </div>
-    <div class="social-links" id="socialLinks">
-      <!-- loaded by  chill bruhh -->
-
-    </div>
-  </section>
-
-  
-  <script src="app.js"></script>
-
-  <footer class="footer">
-  <p>Made by Mitesh</p>
-  </footer>
-
+    <script src="app.js"></script>
 </body>
 </html>

@@ -1,67 +1,71 @@
-// Personal Dev + Social Site Data
-const projects = [
-  {
-    title: "G-M8 Chat",
-    desc: "A real-time chat app built with Node.js, Express, and Socket.io.",
-    link: "https://github.com/Mitxh13/G-M8"
-  },
-  {
-    title: "Sol I",
-    desc:"AI-Powered Adaptive Operating System with Self-Learning Security",
-    udev: "Under Development"
-  },
-];
-
-const skills = [
-  "Python", "C", "JavaScript", "React", "Node.js",
-  "MongoDB", "Express.js", "Git"
-];
-
-const socials = [
-  { name: "GitHub", link: "https://github.com/Mitxh13" },
-  { name: "LinkedIn", link: "https://linkedin.com/in/mitesh-kurumeti" },
-  { name: "X", link: "https://x.com/kmiteshh"},
-];
-
-// Render projects
-const projectGrid = document.getElementById("projectGrid");
-projects.forEach(p => {
-  const card = document.createElement("div");
-  card.className = "card";
-  card.innerHTML = `
-  <h3>${p.title}</h3>
-  <p>${p.desc}</p><br>
-  ${
-    p.apply
-      ? `<a href="${p.apply}" target="_blank" class="btn" style="font-size:13px;">Apply</a>`
-      : p.link
-        ? `<a href="${p.link}" target="_blank" class="btn" style="font-size:13px;">View</a>`
-        : p.udev
-          ? `<a target="_blank" class="udev">${p.udev}</a>`
-          : p.otherb
-            ? `<a href="${p.otherb}" target="_blank" class="otherb" style="font-size:13px;">Test</a>`
-            : ""
-  }
-`;
-  projectGrid.appendChild(card);
+// 1. SCROLL ANIMATION (Intersection Observer)
+// This creates that smooth "fade in up" look as you scroll down
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+}, {
+    threshold: 0.1 // Triggers when 10% of element is visible
 });
 
-// Render skills
-const skillList = document.getElementById("skillList");
-skills.forEach(s => {
-  const el = document.createElement("div");
-  el.className = "skill";
-  el.textContent = s;
-  skillList.appendChild(el);
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
+
+// 2. NETFLIX CAROUSEL LOGIC
+function scrollCerts(direction) {
+    const container = document.getElementById('certList');
+    const scrollAmount = 400; // Adjust for scroll distance
+    if (direction === 'left') {
+        container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    } else {
+        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+}
+
+// 3. MODAL LOGIC
+const modal = document.getElementById('modal');
+const modalImg = document.getElementById('modal-img');
+const modalTitle = document.getElementById('modal-title');
+
+function openModal(imgSrc, title) {
+    modal.style.display = 'flex';
+    modalImg.src = imgSrc;
+    modalTitle.innerText = title;
+    // Prevent background scrolling
+    document.body.style.overflow = 'hidden'; 
+}
+
+function closeModal() {
+    modal.style.display = 'none';
+    // Restore background scrolling
+    document.body.style.overflow = 'auto'; 
+}
+
+// Close modal if clicking outside the content area
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        closeModal();
+    }
 });
 
-// Render socials
-const socialLinks = document.getElementById("socialLinks");
-socials.forEach(s => {
-  const a = document.createElement("a");
-  a.href = s.link;
-  a.textContent = s.name;
-  a.target = "_blank";
-  a.className = "social";
-  socialLinks.appendChild(a);
-});
+// --- EMAIL COPY FUNCTION ---
+function copyEmail() {
+    const email = "kmitesh2006@gmail.com"; // CHANGE THIS TO YOUR ACTUAL EMAIL
+    
+    // Copy to clipboard
+    navigator.clipboard.writeText(email).then(() => {
+        // Show Toast Notification
+        const toast = document.getElementById("email-toast");
+        toast.innerText = `Email copied: ${email}`; // Set text dynamically
+        toast.classList.add("show-toast");
+
+        // Hide after 3 seconds
+        setTimeout(() => {
+            toast.classList.remove("show-toast");
+        }, 3000);
+    }).catch(err => {
+        console.error('Failed to copy: ', err);
+    });
+}
