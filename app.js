@@ -69,3 +69,6 @@ function copyEmail() {
         console.error('Failed to copy: ', err);
     });
 }
+
+const currentYear = new Date().getFullYear();
+document.getElementById("year").textContent = currentYear;
