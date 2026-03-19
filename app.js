@@ -125,3 +125,40 @@ function copyEmail() {
 const currentYear = new Date().getFullYear();
 document.getElementById("year").textContent = currentYear;
 
+// --- VIEW MORE PROJECTS LOGIC ---
+const viewMoreBtn = document.getElementById('viewMoreBtn');
+const extraProjects = document.querySelectorAll('.extra-project');
+const viewMoreText = document.getElementById('viewMoreText');
+
+if (viewMoreBtn) {
+    viewMoreBtn.addEventListener('click', () => {
+        viewMoreBtn.classList.toggle('expanded');
+        
+        if (viewMoreBtn.classList.contains('expanded')) {
+            // SHOW extra projects
+            extraProjects.forEach(proj => {
+                proj.classList.add('is-visible'); // Makes it display: block
+                
+                // Slight delay so the browser registers the display change before animating
+                setTimeout(() => {
+                    proj.classList.add('show');
+                }, 50);
+            });
+            viewMoreText.innerText = 'Show Less';
+        } else {
+            // HIDE extra projects
+            extraProjects.forEach(proj => {
+                proj.classList.remove('show'); // Fades it out
+                
+                // Wait for the CSS fade out animation to finish before removing it from the layout
+                setTimeout(() => {
+                    proj.classList.remove('is-visible');
+                }, 500); 
+            });
+            viewMoreText.innerText = 'View More';
+            
+            // Scroll back up smoothly so the user isn't left at the bottom of the page
+            document.getElementById('projects').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+}

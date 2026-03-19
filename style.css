@@ -596,3 +596,52 @@ footer {
     transform: translateY(-3px);
     text-shadow: 0 0 8px rgba(255,255,255,0.3);
 }
+
+/* --- VIEW MORE BUTTON STYLES --- */
+.view-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.view-more-btn {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+    color: var(--primary);
+    padding: 14px 35px;
+    border-radius: 50px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.view-more-btn:hover {
+    background: var(--surface);
+    border-color: var(--accent-glow);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(119, 63, 241, 0.25);
+}
+
+.view-more-btn svg {
+    transition: transform 0.4s ease;
+}
+
+/* Rotates the arrow when expanded */
+.view-more-btn.expanded svg {
+    transform: rotate(180deg);
+}
+
+/* --- VIEW MORE LOGIC --- */
+.extra-project {
+    display: none !important; /* Forces it to hide on load */
+}
+
+.extra-project.is-visible {
+    display: block !important; /* Reveals it when JS adds this class */
+}
