@@ -77,49 +77,49 @@ function copyEmail() {
 }
 
 // --- RESUME DOWNLOAD FUNCTION ---
-function resumeDownload() {
-    const resumePath = 'Mitesh_Resume.pdf'; 
-    const fallbackText = "Failed to fetch document"; // temp text till u update resume
+// function resumeDownload() {
+//     const resumePath = 'Mitesh_Resume.pdf'; 
+//     const fallbackText = "Failed to fetch document"; // temp text till u update resume
 
-    // 1. Try to fetch the file headers to see if it exists
-    // fetch(resumePath, { method: 'HEAD' })
-    //     .then(response => {
-    //         if (response.ok) {
-    //             // 2. If file exists, create a hidden link and trigger the download
-    //             const link = document.createElement('a');
-    //             link.href = resumePath;
-    //             link.download = 'Mitesh_Resume.pdf'; // Name the file will save as
-    //             document.body.appendChild(link);
-    //             link.click();
-    //             document.body.removeChild(link);
-    //         } else {
-    //             // 3. If file is not found (404), throw an error to trigger the catch block
-    //             throw new Error('File not found');
-    //         }
-    //     })
-    //     .catch(err => {
-    //         // 4. If fetch fails (or file not found), show the toast notification
-    //         console.error('Failed to fetch: ', err);
+//     // 1. Try to fetch the file headers to see if it exists
+//     // fetch(resumePath, { method: 'HEAD' })
+//     //     .then(response => {
+//     //         if (response.ok) {
+//     //             // 2. If file exists, create a hidden link and trigger the download
+//     //             const link = document.createElement('a');
+//     //             link.href = resumePath;
+//     //             link.download = 'Mitesh_Resume.pdf'; // Name the file will save as
+//     //             document.body.appendChild(link);
+//     //             link.click();
+//     //             document.body.removeChild(link);
+//     //         } else {
+//     //             // 3. If file is not found (404), throw an error to trigger the catch block
+//     //             throw new Error('File not found');
+//     //         }
+//     //     })
+//     //     .catch(err => {
+//     //         // 4. If fetch fails (or file not found), show the toast notification
+//     //         console.error('Failed to fetch: ', err);
             
-    //         const toast = document.getElementById("email-toast");
-    //         toast.innerText = fallbackText; // Set text dynamically
-    //         toast.classList.add("show-toast");
+//     //         const toast = document.getElementById("email-toast");
+//     //         toast.innerText = fallbackText; // Set text dynamically
+//     //         toast.classList.add("show-toast");
 
-    //         // Hide after 3 seconds
-    //         setTimeout(() => {
-    //             toast.classList.remove("show-toast");
-    //         }, 3000);
-    //     }
-    // );
-    const toast = document.getElementById("email-toast");
-    toast.innerText = fallbackText; // Set text dynamically
-    toast.classList.add("show-toast");
+//     //         // Hide after 3 seconds
+//     //         setTimeout(() => {
+//     //             toast.classList.remove("show-toast");
+//     //         }, 3000);
+//     //     }
+//     // );
+//     const toast = document.getElementById("email-toast");
+//     toast.innerText = fallbackText; // Set text dynamically
+//     toast.classList.add("show-toast");
 
-    // Hide after 3 seconds
-    setTimeout(() => {
-        toast.classList.remove("show-toast");
-    }, 3000);
-}
+//     // Hide after 3 seconds
+//     setTimeout(() => {
+//         toast.classList.remove("show-toast");
+//     }, 3000);
+// }
 
 
 const currentYear = new Date().getFullYear();
