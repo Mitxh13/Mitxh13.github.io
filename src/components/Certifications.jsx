@@ -12,25 +12,25 @@ const CERTS = [
     title: 'Python',
     issuer: 'Cisco Networking Academy',
     date: '2025',
-    image: 'certificates/Python_cisco.png',
+    image: '/certificates/Python_cisco.png',
   },
   {
     title: 'Operating Systems',
     issuer: 'Cisco Networking Academy',
     date: '2026',
-    image: 'certificates/OS_cisco.png',
+    image: '/certificates/OS_cisco.png',
   },
   {
     title: 'JavaScript',
     issuer: 'Cisco Networking Academy',
     date: '2026',
-    image: 'certificates/JavaScript_cisco.png',
+    image: '/certificates/JavaScript_cisco.png',
   },
   {
     title: 'Problem Solving',
     issuer: 'HackerRank',
     date: '2024',
-    image: 'certificates/HR_Problem_solving.png',
+    image: '/certificates/HR_problem_solving.png',
   },
 ]
 
