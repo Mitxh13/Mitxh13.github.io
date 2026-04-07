@@ -59,7 +59,7 @@
   align-items: center;
   justify-content: center;
   transition: all var(--duration-normal) var(--ease-out);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .theme-toggle-thumb.dark {
@@ -608,7 +608,7 @@
   transform: translateY(-50%);
   font-size: clamp(14rem, 30vw, 24rem);
   font-weight: 900;
-  opacity: 0.15;
+  opacity: 0.30;
   pointer-events: none;
   font-family: var(--font-sans);
   line-height: 1;
@@ -721,6 +721,7 @@
     opacity: 0;
     transform: translateY(50px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -838,8 +839,15 @@
 }
 
 @keyframes pjBounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(5px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
 }
 
 /* Project link icons (shared) */
@@ -1419,4 +1427,3 @@
   color: var(--text-secondary);
   font-size: 0.95rem;
 }
-
