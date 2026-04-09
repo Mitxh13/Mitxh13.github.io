@@ -3,6 +3,30 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 const PROJECTS = [
   {
     num: '01',
+    name: 'Elio',
+    underDev: true,
+    tagline: 'Unified AI Command-Line Interface',
+    description: 'A developer-focused CLI application that unifies multiple AI providers — Anthropic Claude, Google Gemini, and OpenAI ChatGPT — into a single terminal interface.',
+    fullDescription: [
+      'Elio eliminates context-switching by unifying Claude, Gemini, and ChatGPT into a single, authenticated terminal hub.',
+      'The application features a Textual-based TUI with real-time streaming, persistent local session history via SQLite, and seamless file upload support for images and documents.',
+      'Built securely with Python, Elio manages credentials via OS-level keyrings and translates interactions through dynamic provider adapters.'
+    ],
+    features: [
+      'Unified conversation interface for Claude, Gemini, and GPT',
+      'Rich Terminal UI with Markdown rendering and syntax highlighting',
+      'Interactive model selector and inline slash commands',
+      'Local SQLite session history and Markdown export',
+      'Secure OS keyring credential storage',
+      'Multi-modal support with file and image attachments'
+    ],
+    tags: ['Python', 'Textual', 'SQLite', 'CLI'],
+    github:'https://github.com/Elio-labs',
+    live: 'https://elioai.pages.dev',
+    color: '#60a5fa',
+  },
+  {
+    num: '02',
     name: 'Helium',
     underDev: true,
     tagline: 'AI-Powered Security Operating Environment',
@@ -21,10 +45,10 @@ const PROJECTS = [
     tags: ['Python','Java','Linux','PyTorch','TensorFlow'],
     // github: 'https://github.com/yourusername/datavault',
     live: '#',
-    color: '#60a5fa',
+    color: '#0ea5e9',
   },
   {
-    num: '02',
+    num: '03',
     name: 'Vesper-Agent',
     underDev: true,
     tagline: 'Production Infrastructure for AI Agent Fleets',
@@ -46,30 +70,6 @@ const PROJECTS = [
     // github: 'https://github.com/yourusername/sketchml',
     live: '#',
     color: '#0656beff',
-  },
-  {
-    num: '03',
-    name: 'Elio',
-    underDev: true,
-    tagline: 'Unified AI Command-Line Interface',
-    description: 'A developer-focused CLI application that unifies multiple AI providers — Anthropic Claude, Google Gemini, and OpenAI ChatGPT — into a single terminal interface.',
-    fullDescription: [
-      'Elio eliminates context-switching by unifying Claude, Gemini, and ChatGPT into a single, authenticated terminal hub.',
-      'The application features a Textual-based TUI with real-time streaming, persistent local session history via SQLite, and seamless file upload support for images and documents.',
-      'Built securely with Python, Elio manages credentials via OS-level keyrings and translates interactions through dynamic provider adapters.'
-    ],
-    features: [
-      'Unified conversation interface for Claude, Gemini, and GPT',
-      'Rich Terminal UI with Markdown rendering and syntax highlighting',
-      'Interactive model selector and inline slash commands',
-      'Local SQLite session history and Markdown export',
-      'Secure OS keyring credential storage',
-      'Multi-modal support with file and image attachments'
-    ],
-    tags: ['Python', 'Textual', 'SQLite', 'CLI'],
-    // github: '#',
-    // live: '#',
-    color: '#0ea5e9'
   },
   {
     num: '04',

@@ -24,7 +24,7 @@ const EXPERIENCE = [
     description: (
       <>
         An AI-powered campus assistant for university students — built with a custom RAG pipeline, fine-tuned language model, and a React frontend. <br />
-        <a href="https://nanopesu.pages.dev" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', textUnderlineOffset: '4px', marginTop: '0.25rem', display: 'inline-block', fontWeight: 500 }}>Website: https://nanopesu.pages.dev</a>
+        <a href="https://nanopesu.pages.dev" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', textUnderlineOffset: '4px', marginTop: '0.25rem', display: 'inline-block', fontWeight: 500 }}>Website: Click here</a>
       </>
     ),
     skills: ['Python','LLMs','RAG','APIs','Transformers'],
@@ -44,7 +44,9 @@ const EXPERIENCE = [
     description: (
       <>
         Building a developer-focused CLI that unifies Claude, Gemini, and ChatGPT into a single terminal interface with seamless model switching, file uploads, and local session history. <br />
-        <a href="https://github.com/Elio-labs" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', textUnderlineOffset: '4px', marginTop: '0.25rem', display: 'inline-block', fontWeight: 500 }}>GitHub: https://github.com/Elio-labs</a>
+        <a href="https://elioai.pages.dev" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', textUnderlineOffset: '4px', marginTop: '0.25rem', display: 'inline-block', fontWeight: 500 }}>Website: Click here</a><br></br>
+        <a href="https://github.com/Elio-labs" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', textUnderlineOffset: '4px', marginTop: '0.25rem', display: 'inline-block', fontWeight: 500 }}>GitHub: Click here</a>
+
       </>
     ),
     skills: ['Python', 'Textual', 'SQLite', 'CLI'],
